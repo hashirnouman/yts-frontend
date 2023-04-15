@@ -178,11 +178,11 @@ const Form = (props: Props) => {
     try {
       if (format === "mp3") {
         router.push(
-          `http://localhost:8000/download?link=${link}&format=${format}`
+          `https://d4downloader.site/download?link=${link}&format=${format}`
         );
       } else {
         router.push(
-          `http://localhost:8000/download?link=${link}&format=${format}&quality=${quality}`
+          `https://d4downloader.site/download?link=${link}&format=${format}&quality=${quality}`
         );
       }
     } catch (e) {
@@ -253,10 +253,10 @@ const Form = (props: Props) => {
                         >
                           download {item.qualityLabel} {item.container}
                         </Button>
-                        <div id="https://honourrib.com/q37kdmdf?key=5431975e7f7a855b12e3244fb0ade3b4"></div>
                       </>
                     );
                   })}
+                  {/* <div id="https://honourrib.com/q37kdmdf?key=5431975e7f7a855b12e3244fb0ade3b4"></div> */}
                   <Button
                     onClick={() => {
                       setFormat("mp3");

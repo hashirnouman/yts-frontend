@@ -63,7 +63,6 @@ type Props = {
   steps: any;
 };
 const Steps = ({ steps }: Props) => {
-  console.log(steps);
   return (
     <div>
       <H1 size={17.7}>

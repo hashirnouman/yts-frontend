@@ -17,7 +17,7 @@ export default function Home() {
       pageTitle: "home",
     });
 
-    const filter = response.filter((resp: any) => resp.lang === 'en');
+    const filter = response.filter((resp: any) => resp.lang === "en");
     setData(filter[0].content);
     setSteps([filter[2].content, filter[3].content, filter[7].content]);
   };
@@ -37,8 +37,8 @@ export default function Home() {
         src="//honourrib.com/7db0e0eef0300e5a6cd489f3212cc49e/invoke.js"
       ></Script>
       <Form />
-      <Pitch data={data} />
       <div id="container-7db0e0eef0300e5a6cd489f3212cc49e"></div>
+      <Pitch data={data} />
       <Steps steps={steps} />
       <Features />
     </div>
