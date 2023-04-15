@@ -1,6 +1,6 @@
 import axios from "axios";
 const local = "http://localhost:8000";
-const prod = "https://backend.d4downloader.site";
+const prod = "https://d4downloader.site";
 let accessToken;
 if (typeof window !== "undefined") {
   accessToken = localStorage.getItem("token");
