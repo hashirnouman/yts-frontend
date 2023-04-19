@@ -158,6 +158,7 @@ const Form = (props: Props) => {
   const [format, setFormat] = useState("");
   const [size, setSize] = useState<string[]>([]);
   const router = useRouter();
+
   const getVideoInfo = async () => {
     setLoading(true);
     try {
@@ -174,16 +175,16 @@ const Form = (props: Props) => {
       setLoading(false);
     }
   };
+  let win: any = "";
+  if (typeof window != "undefined") {
+    win = window;
+  }
   const download = async (link: string, format: string, quality?: string) => {
     try {
       if (format === "mp3") {
-        router.push(
-          `https://d4downloader.site/download?link=${link}&format=${format}`
-        );
+        win.location = `https://d4downloader.site/download?link=${link}&format=${format}`;
       } else {
-        router.push(
-          `https://d4downloader.site/download?link=${link}&format=${format}&quality=${quality}`
-        );
+        win.location = `https://d4downloader.site/download?link=${link}&format=${format}&quality=${quality}`;
       }
     } catch (e) {
       toast.error("Unable to download video");
@@ -260,7 +261,7 @@ const Form = (props: Props) => {
                   <Button
                     onClick={() => {
                       setFormat("mp3");
-                      download(link, format);
+                      download(link, "mp3", "highest");
                     }}
                   >
                     download mp3
