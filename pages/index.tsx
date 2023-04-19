@@ -10,6 +10,7 @@ import { RootState } from "../redux/store/store";
 import Script from "next/script";
 export default function Home() {
   const [data, setData] = useState<string | undefined>();
+  
   const [steps, setSteps] = useState<any>([]);
   const lang = useSelector((state: RootState) => state.lang.value);
   const get = async () => {
