@@ -23,6 +23,7 @@ const NavbarWrapper = styled.nav`
   top: 0;
   width: 100%;
   margin: 0;
+  z-index: 1000;
   @media screen and (min-width: 320px) and (max-width: 480px) {
     justify-content: space-evenly;
     padding: 0 20px;

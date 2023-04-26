@@ -10,7 +10,7 @@ import { RootState } from "../redux/store/store";
 import Script from "next/script";
 export default function Home() {
   const [data, setData] = useState<string | undefined>();
-  
+
   const [steps, setSteps] = useState<any>([]);
   const lang = useSelector((state: RootState) => state.lang.value);
   const get = async () => {
@@ -38,7 +38,11 @@ export default function Home() {
         src="//honourrib.com/7db0e0eef0300e5a6cd489f3212cc49e/invoke.js"
       ></Script>
       <Form />
-      <div id="container-7db0e0eef0300e5a6cd489f3212cc49e"></div>
+      <div>
+        <div>
+          <div id="container-7db0e0eef0300e5a6cd489f3212cc49e"></div>
+        </div>
+      </div>
       <Pitch data={data} />
       <Steps steps={steps} />
       <Features />
